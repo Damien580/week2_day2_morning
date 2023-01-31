@@ -87,3 +87,20 @@ daisy.speak(2)
 daisy.breed = 'Beagle'
 
 console.log(daisy)
+console.log('================================')
+
+let dogs = []
+let names = ['adam', 'bob', 'randy', 'mike', 'sally']
+let breeds = ['lab', 'retriever', 'shepard', 'collie', 'hound']
+let doggies = () => {
+for (i = 0; i < names.length; i++){
+    let newDog = new Dog(names[i],breeds[i],3)
+    dogs.push(newDog)
+    }
+}
+doggies()
+console.log(dogs)
+
+dogs[2].speak(2)
+
+
