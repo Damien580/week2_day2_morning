@@ -1,12 +1,18 @@
 // Write your code below this line.
-function randomGen(arr){
-    while (arr.length <= arr.length -1){
-        let rand = Math.floor(Math.random() * 11)
-            if (arr.indexOf(rand) < 0){
-                arr.push(rand)
-                return rand
+const luckyNumbers = (num) => {
+    let arr =  []
+    for (i=0 ; i < num; i ++){
+        let randInt = Math.floor(Math.random()*11)
+        if (!arr.includes(randInt)){
+            arr.push(randInt)
+            
         }
-    }       
-} 
+        else{
+            num = num + 1
+        }
     
-console.log(randomGen(2))
+
+    }
+    return arr
+}
+console.log(luckyNumbers(6))
